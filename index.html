@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/style.css" />
+    <title>Blackjack</title>
+  </head>
+  <body>
+    <div id="div1">
+      <h1>Blackjack</h1>
+      <form action="blackjack.html" method="get">
+        <fieldset>
+          <legend>Username selection</legend>
+          <div class="form-grid">
+            <label
+              >Name:<br />
+              <input
+                type="text"
+                name="firstNameField"
+                id="firstNameField"
+                placeholder="Type here"
+                minlength="2"
+                maxlength="20"
+                pattern="[\p{L}\s'\-]+"
+                title="Letters, spaces, hyphens and apostrophes only"
+                required
+              />
+            </label>
+          </div>
+          <div class="submit">
+            <input type="submit" value="Start game" />
+          </div>
+        </fieldset>
+      </form>
+    </div>
+    <details open id="rules-toggle">
+      <summary>Rules and how to play</summary>
+      <div id="rules">
+        <div>
+          <h2 class="ruleHeaders">How to play:</h2>
+          <ol class="ruleLists">
+            <li>Enter your name and press Start game. You begin with $1000.</li>
+            <li>Click the chips to place your bet, then press Deal Hand.</li>
+            <li>
+              Press Hit to take another card or Stay to keep your hand. With
+              exactly 21 your turn ends automatically.
+            </li>
+            <li>After you stay, the dealer plays and the result is shown.</li>
+            <li>
+              Your name and balance are saved in your browser, so you can
+              continue later.
+            </li>
+          </ol>
+        </div>
+        <div>
+          <h2 class="ruleHeaders">Scoring:</h2>
+          <ul class="ruleLists">
+            <li>Ace = 1 or 11 (whichever is better for your hand)</li>
+            <li>Face Cards (J, Q, K) = 10</li>
+            <li>Number Cards = Value of card</li>
+          </ul>
+        </div>
+        <div>
+          <h2 class="ruleHeaders">Bets:</h2>
+          <ul class="ruleLists">
+            <li>Bets are placed only before the cards are dealt</li>
+            <li>You cannot bet more than your balance</li>
+            <li>Clear Bet removes your chips before dealing</li>
+            <li>No double down, no split, no side bets, no insurance</li>
+          </ul>
+        </div>
+        <div>
+          <h2 class="ruleHeaders">Dealer:</h2>
+          <ul class="ruleLists">
+            <li>Dealer shows one card at the start</li>
+            <li>Dealer must hit until reaching 17 or higher</li>
+            <li>If you bust, the dealer does not draw more cards</li>
+          </ul>
+        </div>
+        <div>
+          <h2 class="ruleHeaders">Who wins:</h2>
+          <ul class="ruleLists">
+            <li>
+              You win if your sum is bigger than the dealer's without busting
+            </li>
+            <li>You win if the dealer busts and you did not bust</li>
+            <li>You lose if you bust or the dealer's sum is bigger</li>
+            <li>Same sum as the dealer = tie</li>
+          </ul>
+        </div>
+        <div>
+          <h2 class="ruleHeaders">Payout:</h2>
+          <ul class="ruleLists">
+            <li>Win: you get your bet back plus the same amount</li>
+            <li>Tie: your bet is returned</li>
+            <li>Loss: you lose your bet</li>
+            <li>No bonus for a blackjack</li>
+            <li>If your balance reaches $0, it resets to $1000</li>
+          </ul>
+        </div>
+      </div>
+    </details>
+  </body>
+</html>
